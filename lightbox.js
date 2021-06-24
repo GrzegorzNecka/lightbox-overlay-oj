@@ -9,7 +9,7 @@ buttonNope();
 
 const lightbox = () =>
   Vue.component('lightbox', {
-    props: ['lightboxState'],
+    props: ['lightboxState', 'updateState'],
     computed: {
       setActiveClass: function() {
         console.log(this.lightboxState);
@@ -29,7 +29,11 @@ const lightbox = () =>
           <div class="relative py-3 px-2 flex">
             <span class="font-semibold text-white md:text-base text-sm">Popup Title</span>
 
-          <button-close></button-close>
+          <button-close
+          
+          v-on:button="updateState"
+    
+          ></button-close>
           
          </div>
         </div>
