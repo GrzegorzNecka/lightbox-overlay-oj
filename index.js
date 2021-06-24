@@ -8,5 +8,10 @@ lightbox();
 
 new Vue({
   el: '#app',
-  data: { lightboxState: true }
+  data: { lightboxState: true },
+  methods: {
+    updateState: function(state) {
+      this.lightboxState = state;
+    }
+  }
 });

@@ -9,8 +9,13 @@
 <body class="h-screen">
 
   <div id="app" class="h-screen bg-gray-900">
-
-    <button-open></button-open>
+   
+    <button-open 
+    
+    v-bind:lightbox-state="lightboxState"
+    v-on:button="updateState"
+   
+    ></button-open>
     <lightbox v-bind:lightbox-state="lightboxState"></lightbox>
 
 

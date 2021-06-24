@@ -17,7 +17,7 @@ const lightbox = () =>
       }
     },
     template: `
-    <div v-bind:class="{ 'hidden' : setActiveClass }">
+    <div v-bind:class="{ 'hidden' : setActiveClass } ">
     
     <div class="h-screen absolute left-0 top-0 bottom-0 right-0 flex justify-center items-center bg-black
     
