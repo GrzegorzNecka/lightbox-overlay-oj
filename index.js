@@ -1,8 +1,9 @@
 import Vue from 'vue';
-import buttonClose from './button-close';
+import buttonClose from './buttonClose';
+import buttonOpen from './buttonOpen';
 
 buttonClose();
-
+buttonOpen();
 new Vue({
   el: '#app',
   data: {}
