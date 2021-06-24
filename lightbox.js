@@ -9,8 +9,21 @@ buttonNope();
 
 const lightbox = () =>
   Vue.component('lightbox', {
+    props: ['lightboxState'],
+    computed: {
+      setActiveClass: function() {
+        console.log(this.lightboxState);
+        return this.lightboxState;
+      }
+    },
     template: `
-    <div class="h-screen absolute left-0 top-0 bottom-0 right-0 flex justify-center items-center bg-black">
+    <div v-bind:class="{ 'hidden' : setActiveClass }">
+    
+    <div class="h-screen absolute left-0 top-0 bottom-0 right-0 flex justify-center items-center bg-black
+    
+    ">
+
+
       <div class="bg-white rounded md:w-1/3 w-1/2 border shadow-lg">
         <div class="rounded-t bg-orange-500">
           <div class="relative py-3 px-2 flex">
@@ -30,6 +43,7 @@ const lightbox = () =>
           
            </div>
       </div>
+    </div>
     </div>
       `
   });
