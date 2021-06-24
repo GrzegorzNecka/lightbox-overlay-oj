@@ -1,13 +1,10 @@
 import Vue from 'vue';
-import buttonClose from './buttonClose';
-import buttonOpen from './buttonOpen';
-import buttonSure from './buttonSure';
-import buttonNope from './buttonNopoe';
 
-buttonClose();
+import buttonOpen from './buttonOpen';
+import lightbox from './lightbox';
+
 buttonOpen();
-buttonSure();
-buttonNope();
+lightbox();
 
 new Vue({
   el: '#app',
