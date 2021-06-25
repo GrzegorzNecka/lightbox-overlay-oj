@@ -10,8 +10,18 @@
 
   <div id="app" class="h-screen bg-gray-900">
 
-    <button-open v-bind:lightbox-state="lightboxState" v-on:button="updateState"></button-open>
-    <lightbox v-bind:lightbox-state="lightboxState" v-bind:update-state="updateState"></lightbox>
+    <button-open 
+    v-bind:lightbox-state="lightboxState" 
+    v-bind:button-open-title='buttonOpenTitle'
+    v-on:button="updateState"
+    
+    />
+    </button-open>
+    <lightbox 
+    v-bind:lightbox-state="lightboxState" 
+    v-bind:update-state="updateState" 
+    v-bind:lightbox='lightbox'>
+    </lightbox>
 
 
 

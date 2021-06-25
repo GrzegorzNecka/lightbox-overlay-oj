@@ -8,7 +8,16 @@ lightbox();
 
 new Vue({
   el: '#app',
-  data: { lightboxState: true },
+  data: {
+    lightboxState: true,
+    lightbox: {
+      title: 'Popup Title',
+      content: 'hey! Are u sure u want to do this?',
+      btnAcceptTitle: 'Sure!',
+      btnUnAcceptTitle: 'Nope'
+    },
+    buttonOpenTitle: 'I want to do it!'
+  },
   methods: {
     updateState: function(state) {
       this.lightboxState = state;

@@ -2,7 +2,7 @@ import Vue from 'vue';
 
 const buttonOpen = () =>
   Vue.component('button-open', {
-    props: ['lightboxState'],
+    props: ['lightboxState', 'buttonOpenTitle'],
     computed: {
       setActiveClass: function() {
         return !this.lightboxState;
@@ -14,9 +14,7 @@ const buttonOpen = () =>
 
         v-on:click=" $emit('button', !lightboxState)"
 
-        
-        
-        class="bg-orange-500 text-white p-2 rounded m-5">I want to do it!</button>
+        class="bg-orange-500 text-white p-2 rounded m-5">{{buttonOpenTitle}}</button>
     </div>
       `
   });
